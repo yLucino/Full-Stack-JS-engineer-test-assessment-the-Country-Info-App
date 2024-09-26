@@ -1,14 +1,13 @@
-import CountryList from './components/CountryList.jsx';
-import CountryInfo from './components/CountryInfo.jsx';
+import CountryList from './components/countryList';
+import CountryInfo from './components/CountryInfo';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './styles/App.css';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' exact component={CountryList} />  
-        <Route path="/country-info/:countryCode" component={CountryInfo}/>  
+        <Route path="/" element={<CountryList />} />
+        <Route path="/country-info/:countryCode" element={<CountryInfo />} />  
       </Routes> 
     </Router>
   );
